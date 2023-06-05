@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c525c3496be4df4eb16d6469787c1a34",
+    "content-hash": "e461f70320832411a2491c101c47f0de",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -2902,6 +2902,52 @@
                 "source": "https://github.com/silverstripe/silverstripe-graphql/tree/5.0.0"
             },
             "time": "2023-04-26T03:40:13+00:00"
+        },
+        {
+            "name": "silverstripe/graphql-devtools",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-graphql-devtools.git",
+                "reference": "c9d8b315b56885eed731cd3a9e0754233e32272d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-graphql-devtools/zipball/c9d8b315b56885eed731cd3a9e0754233e32272d",
+                "reference": "c9d8b315b56885eed731cd3a9e0754233e32272d",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/graphql": "^3 || ^4 || ^5",
+                "symfony/filesystem": "^4 || ^5 || ^6",
+                "symfony/finder": "^4 || ^5 || ^6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\GraphQLDevTools\\": "src/",
+                    "SilverStripe\\GraphQLDevTools\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Tools to help developers building new applications on SilverStripe’s GraphQL API",
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-graphql-devtools/issues",
+                "source": "https://github.com/silverstripe/silverstripe-graphql-devtools/tree/1.0.0"
+            },
+            "time": "2023-01-10T00:26:13+00:00"
         },
         {
             "name": "silverstripe/login-forms",

@@ -1,0 +1,6 @@
+query Page{
+  Page {
+    Title: String
+    Content: String
+  }
+}

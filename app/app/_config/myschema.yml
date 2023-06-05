@@ -1,0 +1,10 @@
+SilverStripe\GraphQL\Schema\Schema:
+  schema:
+    - |
+      type Page {
+        Title: String
+        Content: String
+      }
+
+  types:
+    - Page

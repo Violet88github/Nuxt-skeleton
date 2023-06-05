@@ -1,0 +1,7 @@
+---
+Name: custom-headless-rest-fields
+---
+SilverStripe\CMS\Model\SiteTree:
+  headlessFields:
+    Content: Content
+    ClassName: ClassName

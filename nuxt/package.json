@@ -8,7 +8,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "devDependencies": {
     "@nuxtjs/apollo": "^5.0.0-alpha.6",
@@ -22,10 +23,20 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.14.1",
     "nuxt": "^3.5.2",
-    "typescript": "^5.1.3"
+    "typescript": "^5.1.3",
+    "@graphql-codegen/cli": "4.0.1",
+    "@graphql-codegen/client-preset": "4.0.0"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.15",
+    "@graphql-codegen/cli": "4.0.1",
+    "@nuxt/image-edge": "^1.0.0-28094923.e859bba",
+    "@nuxtjs/color-mode": "^3.2.0",
     "@pinia/nuxt": "^0.4.11",
+    "@vue/apollo-composable": "^4.0.0-beta.5",
+    "graphql": "16.6.0",
+    "graphql-tag": "^2.12.6",
+    "nuxt-icon": "^0.4.1",
     "pinia": "^2.1.3"
   }
 }

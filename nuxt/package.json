@@ -12,6 +12,8 @@
   },
   "devDependencies": {
     "@nuxt/image": "^0.7.1",
+    "@nuxt/image-edge": "^1.0.0-28100678.6e9298b",
+    "@nuxtjs/i18n": "^8.0.0-beta.12",
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^5.59.9",
     "eslint": "^8.42.0",
@@ -27,8 +29,6 @@
   },
   "dependencies": {
     "@formkit/nuxt": "^0.17.2",
-    "@nuxtjs/i18n": "^7.3.1",
-    "@nuxtjs/toast": "^3.3.1",
     "@pinia/nuxt": "^0.4.11",
     "pinia": "^2.1.3"
   }

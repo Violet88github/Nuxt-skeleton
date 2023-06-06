@@ -2,7 +2,6 @@ module.exports = {
   env: {
     browser: true,
     es2021: true
-
   },
   extends: [
     'standard-with-typescript',
@@ -15,5 +14,7 @@ module.exports = {
   plugins: [
     'vue'
   ],
-  rules: { 'vue/multi-word-component-names': 0 }
+  rules: {
+    'vue/multi-word-component-names': 'off'
+  }
 }

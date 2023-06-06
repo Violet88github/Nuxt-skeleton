@@ -1,12 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    target: 'static',
-    buildModules: [
-      '@nuxt/image',
-      'nuxt-icon',
+    modules: [
       '@pinia/nuxt',
-      '@nuxtjs/toast',
+      'nuxt-icon',
       '@nuxtjs/i18n',
       '@formkit/nuxt',
-    ]
+      '@nuxt/image-edge',
+    ],
+    css: ['~/assets/css/main.css'],
+    postcss: {
+       plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+     },
+    },
+    formkit: {
+       configFile: './formkit.config.ts',
+    },
 });

@@ -61,6 +61,9 @@
       ],
       "#apollo": [
         "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/.nuxt/apollo"
+      ],
+      "pinia": [
+        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/node_modules/pinia/dist/pinia"
       ]
     }
   },

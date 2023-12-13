@@ -8,69 +8,65 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "#imports": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/.nuxt/types/nitro-imports"
+        "./types/nitro-imports"
       ],
       "#paths": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/node_modules/nuxt/dist/core/runtime/nitro/paths"
+        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton"
+        "./.."
       ],
       "~/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*"
+        "../*"
       ],
       "@": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton"
+        "./.."
       ],
       "@/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*"
+        "../*"
       ],
       "~~": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton"
+        "./.."
       ],
       "~~/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*"
+        "../*"
       ],
       "@@": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton"
+        "./.."
       ],
       "@@/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*"
+        "../*"
       ],
       "assets": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/assets"
+        "../assets"
       ],
       "assets/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/public"
+        "../public"
       ],
       "public/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/public/*"
-      ],
-      "#image": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/node_modules/@nuxt/image/dist/runtime"
-      ],
-      "#image/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/node_modules/@nuxt/image/dist/runtime/*"
-      ],
-      "#apollo": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/.nuxt/apollo"
-      ],
-      "pinia": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/node_modules/pinia/dist/pinia"
+        "../public/*"
       ]
     }
   },
   "include": [
-    "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro-nuxt.d.ts",
+    "../node_modules/@nuxt/devtools/runtime/server",
+    "../node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../node_modules/nuxt/node_modules",
+    "../dist"
   ]
 }

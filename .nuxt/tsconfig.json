@@ -3,108 +3,97 @@
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
+    "jsxImportSource": "vue",
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
     "skipLibCheck": true,
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
     "strict": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
+    "types": [],
+    "verbatimModuleSyntax": true,
     "allowJs": true,
-    "baseUrl": "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton",
     "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": [
-      "node"
-    ],
     "paths": {
       "~": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton"
+        ".."
       ],
       "~/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*"
+        "../*"
       ],
       "@": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton"
+        ".."
       ],
       "@/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*"
+        "../*"
       ],
       "~~": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton"
+        ".."
       ],
       "~~/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*"
+        "../*"
       ],
       "@@": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton"
+        ".."
       ],
       "@@/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*"
+        "../*"
       ],
       "assets": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/assets"
+        "../assets"
       ],
       "assets/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/public"
+        "../public"
       ],
       "public/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/public/*"
+        "../public/*"
       ],
       "#app": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/node_modules/nuxt/dist/app"
+        "../node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/node_modules/nuxt/dist/app/*"
+        "../node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/node_modules/nuxt/dist/app/compat/vue-demi"
-      ],
-      "#image": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/node_modules/@nuxt/image/dist/runtime"
-      ],
-      "#image/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/node_modules/@nuxt/image/dist/runtime/*"
-      ],
-      "#apollo": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/.nuxt/apollo"
-      ],
-      "pinia": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/node_modules/pinia/dist/pinia"
+        "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "#vue-router": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/.nuxt/vue-router"
+        "./vue-router-stub"
       ],
       "#imports": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/.nuxt/imports"
+        "./imports"
       ],
       "#build": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/.nuxt"
+        "."
       ],
       "#build/*": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/.nuxt/*"
+        "./*"
       ],
       "#components": [
-        "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/.nuxt/components"
+        "./components"
       ]
     }
   },
   "include": [
     "./nuxt.d.ts",
     "../**/*",
-    "../**/*",
-    "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton",
-    "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*",
-    "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton",
-    "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*",
-    "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton",
-    "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*",
-    "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton",
-    "/Users/thijslooijen/Documents/GitHub/Nuxt-skeleton/*"
+    "../node_modules/@nuxt/devtools/runtime",
+    "../node_modules/@nuxt/telemetry/runtime",
+    ".."
   ],
   "exclude": [
+    "../node_modules",
+    "../node_modules/nuxt/node_modules",
+    "../node_modules/@nuxt/devtools/runtime/server",
+    "../node_modules/@nuxt/telemetry/runtime/server",
     "../dist",
     "../.output"
   ]

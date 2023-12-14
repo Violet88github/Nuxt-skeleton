@@ -2,7 +2,7 @@
   <component
     :is="is"
     ref="button"
-    class="btn flex items-center gap-x-2 relative duration-200 transition-all group"
+    class="text-xl flex items-center gap-x-2 relative duration-200 transition-all group"
     :class="{'pr-10': hoverEffect}"
     @click="navigate"
   >

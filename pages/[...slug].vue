@@ -14,7 +14,15 @@
       readOnePage(filter: { title: { eq: $slug } }) {
         id
         title
-        content
+        className
+        elementalArea {
+            elements {
+                nodes {
+                title
+                className
+                }
+            }
+        }
       }
     }
   `

@@ -1,7 +1,0 @@
----
-Name: api-routes
-After: framework/routes#coreroutes
----
-SilverStripe\Control\Director:
-  rules:
-    'api/v1/pages/$Slug': 'PageApiController'

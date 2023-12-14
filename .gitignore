@@ -1,22 +1,24 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
 # Logs
 logs
 *.log
-npm-debug.log*
 
-# Dependency directories
-node_modules/
+# Misc
+.DS_Store
+.fleet
+.idea
 
-# Directory for built files
-/dist
-
-# .env file (contains sensitive information)
+# Local env files
 .env
-
-# Editor directories and files
-.vscode/
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.env.*
+!.env.example

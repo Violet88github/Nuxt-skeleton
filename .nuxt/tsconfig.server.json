@@ -53,12 +53,31 @@
       ],
       "public/*": [
         "../public/*"
+      ],
+      "#image": [
+        "../node_modules/@nuxt/image/dist/runtime"
+      ],
+      "#image/*": [
+        "../node_modules/@nuxt/image/dist/runtime/*"
+      ],
+      "#internal/nuxt-site-config": [
+        "../node_modules/nuxt-site-config/dist/runtime/nitro/composables"
+      ],
+      "#internal/nuxt-site-config/*": [
+        "../node_modules/nuxt-site-config/dist/runtime/nitro/composables/*"
       ]
     }
   },
   "include": [
     "./types/nitro-nuxt.d.ts",
+    "../node_modules/@nuxt/image/runtime/server",
+    "../node_modules/@formkit/nuxt/runtime/server",
+    "../node_modules/nuxt-lodash/runtime/server",
+    "../node_modules/nuxt-site-config/dist/module.mjs/runtime/server",
+    "../node_modules/nuxt-simple-sitemap/runtime/server",
+    "../node_modules/nuxt-icon/runtime/server",
     "../node_modules/@nuxtjs/tailwindcss/runtime/server",
+    "../node_modules/@vueuse/nuxt/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",
@@ -68,6 +87,7 @@
   "exclude": [
     "../node_modules",
     "../node_modules/nuxt/node_modules",
+    "../node_modules/nuxt-site-config/dist",
     "../dist"
   ]
 }

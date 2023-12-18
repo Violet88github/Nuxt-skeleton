@@ -1,4 +1,4 @@
-export const parseSilverStripeNames = (inputString: string): string | null  => {
+export const parseSilverStripeNames = (inputString: string): string  => {
     const slashes = 2;
     const parts = inputString.split('\\');
   
@@ -9,5 +9,5 @@ export const parseSilverStripeNames = (inputString: string): string | null  => {
       return lastPart;
     }
   
-    return null;
+    return '';
 }

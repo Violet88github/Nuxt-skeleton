@@ -1,4 +1,4 @@
-type SilverStripePage = {
+export type SilverStripePage = {
     __typename: string;
     id: string;
     title: string;
@@ -16,7 +16,7 @@ type SilverStripePage = {
     };
 };
 
-type Page = {
+export type Page = {
     id: string;
     title: string;
     type: string;

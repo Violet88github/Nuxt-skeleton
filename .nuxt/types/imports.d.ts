@@ -658,6 +658,9 @@ declare global {
   // @ts-ignore
   export type { Component, ComponentPublicInstance, ComputedRef, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode } from '../../node_modules/vue'
   import('../../node_modules/vue')
+  // @ts-ignore
+  export type { Page } from '../../composables/setupPageObject'
+  import('../../composables/setupPageObject')
 }
 // for vue template auto import
 import { UnwrapRef } from 'vue'

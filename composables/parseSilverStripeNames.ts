@@ -1,5 +1,5 @@
 export const parseSilverStripeNames = (inputString: string): string  => {
   const parts = inputString.split('\\');
   
-  return parts[parts.length - 1].toLocaleLowerCase();
+  return parts[parts.length - 1];
 }

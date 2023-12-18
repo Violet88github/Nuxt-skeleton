@@ -19,7 +19,7 @@ export type SilverStripePage = {
 export type Page = {
     id: string;
     title: string;
-    type: string;
+    type: any;
     elementalArea: {
       elements: {
         title: string;

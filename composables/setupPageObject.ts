@@ -42,7 +42,5 @@ export default function transformPage(originalObject: SilverStripePage):Page {
         },
     };
 
-    transformedObject.type = parseSilverStripeNames(transformedObject.type);
-
     return transformedObject;
   }

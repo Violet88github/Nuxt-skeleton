@@ -38,7 +38,6 @@ declare global {
   const defineNuxtPlugin: typeof import('../../node_modules/nuxt/dist/app/nuxt')['defineNuxtPlugin']
   const defineNuxtRouteMiddleware: typeof import('../../node_modules/nuxt/dist/app/composables/router')['defineNuxtRouteMiddleware']
   const defineOptions: typeof import('../../node_modules/vue')['defineOptions']
-  const definePageMeta: typeof import('../../node_modules/nuxt/dist/pages/runtime/composables')['definePageMeta']
   const definePayloadPlugin: typeof import('../../node_modules/nuxt/dist/app/nuxt')['definePayloadPlugin']
   const definePayloadReducer: typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReducer']
   const definePayloadReviver: typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReviver']
@@ -112,8 +111,8 @@ declare global {
   const nextTick: typeof import('../../node_modules/vue')['nextTick']
   const onActivated: typeof import('../../node_modules/vue')['onActivated']
   const onBeforeMount: typeof import('../../node_modules/vue')['onBeforeMount']
-  const onBeforeRouteLeave: typeof import('../vue-router-stub')['onBeforeRouteLeave']
-  const onBeforeRouteUpdate: typeof import('../vue-router-stub')['onBeforeRouteUpdate']
+  const onBeforeRouteLeave: typeof import('../../node_modules/nuxt/dist/app/composables/router')['onBeforeRouteLeave']
+  const onBeforeRouteUpdate: typeof import('../../node_modules/nuxt/dist/app/composables/router')['onBeforeRouteUpdate']
   const onBeforeUnmount: typeof import('../../node_modules/vue')['onBeforeUnmount']
   const onBeforeUpdate: typeof import('../../node_modules/vue')['onBeforeUpdate']
   const onClickOutside: typeof import('../../node_modules/@vueuse/core')['onClickOutside']
@@ -130,6 +129,7 @@ declare global {
   const onStartTyping: typeof import('../../node_modules/@vueuse/core')['onStartTyping']
   const onUnmounted: typeof import('../../node_modules/vue')['onUnmounted']
   const onUpdated: typeof import('../../node_modules/vue')['onUpdated']
+  const parseSilverStripeNames: typeof import('../../composables/parseSilverStripeNames')['parseSilverStripeNames']
   const pausableWatch: typeof import('../../node_modules/@vueuse/core')['pausableWatch']
   const prefetchComponents: typeof import('../../node_modules/nuxt/dist/app/composables/preload')['prefetchComponents']
   const preloadComponents: typeof import('../../node_modules/nuxt/dist/app/composables/preload')['preloadComponents']
@@ -160,6 +160,7 @@ declare global {
   const resolveUnref: typeof import('../../node_modules/@vueuse/core')['resolveUnref']
   const setPageLayout: typeof import('../../node_modules/nuxt/dist/app/composables/router')['setPageLayout']
   const setResponseStatus: typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['setResponseStatus']
+  const setupPageObject: typeof import('../../composables/setupPageObject')['default']
   const shallowReactive: typeof import('../../node_modules/vue')['shallowReactive']
   const shallowReadonly: typeof import('../../node_modules/vue')['shallowReadonly']
   const shallowRef: typeof import('../../node_modules/vue')['shallowRef']
@@ -382,7 +383,6 @@ declare global {
   const useLastIndexOf: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['lastIndexOf']
   const useLazyAsyncData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useLazyAsyncData']
   const useLazyFetch: typeof import('../../node_modules/nuxt/dist/app/composables/fetch')['useLazyFetch']
-  const useLink: typeof import('../vue-router-stub')['useLink']
   const useLocalStorage: typeof import('../../node_modules/@vueuse/core')['useLocalStorage']
   const useLowerCase: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['lowerCase']
   const useLowerFirst: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['lowerFirst']
@@ -700,7 +700,6 @@ declare module 'vue' {
     readonly defineNuxtPlugin: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['defineNuxtPlugin']>
     readonly defineNuxtRouteMiddleware: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['defineNuxtRouteMiddleware']>
     readonly defineOptions: UnwrapRef<typeof import('../../node_modules/vue')['defineOptions']>
-    readonly definePageMeta: UnwrapRef<typeof import('../../node_modules/nuxt/dist/pages/runtime/composables')['definePageMeta']>
     readonly definePayloadPlugin: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['definePayloadPlugin']>
     readonly definePayloadReducer: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReducer']>
     readonly definePayloadReviver: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReviver']>
@@ -774,8 +773,8 @@ declare module 'vue' {
     readonly nextTick: UnwrapRef<typeof import('../../node_modules/vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('../../node_modules/vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('../../node_modules/vue')['onBeforeMount']>
-    readonly onBeforeRouteLeave: UnwrapRef<typeof import('../vue-router-stub')['onBeforeRouteLeave']>
-    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('../vue-router-stub')['onBeforeRouteUpdate']>
+    readonly onBeforeRouteLeave: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['onBeforeRouteLeave']>
+    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['onBeforeRouteUpdate']>
     readonly onBeforeUnmount: UnwrapRef<typeof import('../../node_modules/vue')['onBeforeUnmount']>
     readonly onBeforeUpdate: UnwrapRef<typeof import('../../node_modules/vue')['onBeforeUpdate']>
     readonly onClickOutside: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['onClickOutside']>
@@ -792,6 +791,7 @@ declare module 'vue' {
     readonly onStartTyping: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['onStartTyping']>
     readonly onUnmounted: UnwrapRef<typeof import('../../node_modules/vue')['onUnmounted']>
     readonly onUpdated: UnwrapRef<typeof import('../../node_modules/vue')['onUpdated']>
+    readonly parseSilverStripeNames: UnwrapRef<typeof import('../../composables/parseSilverStripeNames')['parseSilverStripeNames']>
     readonly pausableWatch: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['pausableWatch']>
     readonly prefetchComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preload')['prefetchComponents']>
     readonly preloadComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preload')['preloadComponents']>
@@ -822,6 +822,7 @@ declare module 'vue' {
     readonly resolveUnref: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['resolveUnref']>
     readonly setPageLayout: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['setPageLayout']>
     readonly setResponseStatus: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['setResponseStatus']>
+    readonly setupPageObject: UnwrapRef<typeof import('../../composables/setupPageObject')['default']>
     readonly shallowReactive: UnwrapRef<typeof import('../../node_modules/vue')['shallowReactive']>
     readonly shallowReadonly: UnwrapRef<typeof import('../../node_modules/vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('../../node_modules/vue')['shallowRef']>
@@ -1044,7 +1045,6 @@ declare module 'vue' {
     readonly useLastIndexOf: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['lastIndexOf']>
     readonly useLazyAsyncData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useLazyAsyncData']>
     readonly useLazyFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/fetch')['useLazyFetch']>
-    readonly useLink: UnwrapRef<typeof import('../vue-router-stub')['useLink']>
     readonly useLocalStorage: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useLocalStorage']>
     readonly useLowerCase: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['lowerCase']>
     readonly useLowerFirst: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['lowerFirst']>
@@ -1355,7 +1355,6 @@ declare module '@vue/runtime-core' {
     readonly defineNuxtPlugin: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['defineNuxtPlugin']>
     readonly defineNuxtRouteMiddleware: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['defineNuxtRouteMiddleware']>
     readonly defineOptions: UnwrapRef<typeof import('../../node_modules/vue')['defineOptions']>
-    readonly definePageMeta: UnwrapRef<typeof import('../../node_modules/nuxt/dist/pages/runtime/composables')['definePageMeta']>
     readonly definePayloadPlugin: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['definePayloadPlugin']>
     readonly definePayloadReducer: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReducer']>
     readonly definePayloadReviver: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReviver']>
@@ -1429,8 +1428,8 @@ declare module '@vue/runtime-core' {
     readonly nextTick: UnwrapRef<typeof import('../../node_modules/vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('../../node_modules/vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('../../node_modules/vue')['onBeforeMount']>
-    readonly onBeforeRouteLeave: UnwrapRef<typeof import('../vue-router-stub')['onBeforeRouteLeave']>
-    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('../vue-router-stub')['onBeforeRouteUpdate']>
+    readonly onBeforeRouteLeave: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['onBeforeRouteLeave']>
+    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['onBeforeRouteUpdate']>
     readonly onBeforeUnmount: UnwrapRef<typeof import('../../node_modules/vue')['onBeforeUnmount']>
     readonly onBeforeUpdate: UnwrapRef<typeof import('../../node_modules/vue')['onBeforeUpdate']>
     readonly onClickOutside: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['onClickOutside']>
@@ -1447,6 +1446,7 @@ declare module '@vue/runtime-core' {
     readonly onStartTyping: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['onStartTyping']>
     readonly onUnmounted: UnwrapRef<typeof import('../../node_modules/vue')['onUnmounted']>
     readonly onUpdated: UnwrapRef<typeof import('../../node_modules/vue')['onUpdated']>
+    readonly parseSilverStripeNames: UnwrapRef<typeof import('../../composables/parseSilverStripeNames')['parseSilverStripeNames']>
     readonly pausableWatch: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['pausableWatch']>
     readonly prefetchComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preload')['prefetchComponents']>
     readonly preloadComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preload')['preloadComponents']>
@@ -1477,6 +1477,7 @@ declare module '@vue/runtime-core' {
     readonly resolveUnref: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['resolveUnref']>
     readonly setPageLayout: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['setPageLayout']>
     readonly setResponseStatus: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['setResponseStatus']>
+    readonly setupPageObject: UnwrapRef<typeof import('../../composables/setupPageObject')['default']>
     readonly shallowReactive: UnwrapRef<typeof import('../../node_modules/vue')['shallowReactive']>
     readonly shallowReadonly: UnwrapRef<typeof import('../../node_modules/vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('../../node_modules/vue')['shallowRef']>
@@ -1699,7 +1700,6 @@ declare module '@vue/runtime-core' {
     readonly useLastIndexOf: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['lastIndexOf']>
     readonly useLazyAsyncData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useLazyAsyncData']>
     readonly useLazyFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/fetch')['useLazyFetch']>
-    readonly useLink: UnwrapRef<typeof import('../vue-router-stub')['useLink']>
     readonly useLocalStorage: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useLocalStorage']>
     readonly useLowerCase: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['lowerCase']>
     readonly useLowerFirst: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['lowerFirst']>

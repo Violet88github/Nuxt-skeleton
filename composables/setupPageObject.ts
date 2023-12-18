@@ -10,6 +10,7 @@ export type SilverStripePage = {
         nodes: {
           __typename: string;
           title: string;
+          content: string;
           className: string;
         }[];
       };
@@ -36,8 +37,9 @@ export default function transformPage(originalObject: SilverStripePage):Page {
         type: className,
         elementalArea: {
             elements: originalObject.elementalArea.elements.nodes.map((node) => ({
-            title: node.title,
-            type: node.className,
+                title: node.title,
+                cotent: node.content,
+                type: node.className,
             })),
         },
     };

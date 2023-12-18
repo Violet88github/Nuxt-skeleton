@@ -33,14 +33,16 @@ export default function transformPage(originalObject: SilverStripePage):Page {
 
     const transformedObject: Page = {
         ...rest,
-        type: parseSilverStripeNames(className),
+        type: className,
         elementalArea: {
-          elements: originalObject.elementalArea.elements.nodes.map((node) => ({
+            elements: originalObject.elementalArea.elements.nodes.map((node) => ({
             title: node.title,
-            type: parseSilverStripeNames(node.className),
-          })),
+            type: node.className,
+            })),
         },
-      };
+    };
+
+    transformedObject.type = parseSilverStripeNames(transformedObject.type);
 
     return transformedObject;
   }
